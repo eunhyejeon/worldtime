@@ -1,0 +1,244 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Build outputs
+dist/
+build/
+*.local
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Editor directories and files
+.vscode/
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Logs
+logs/
+*.log
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# Dependency directories
+.pnp
+.pnp.js
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# Figma Make specific
+*.figma-make
+
+# Temporary files
+*.tmp
+*.temp
+</gitignore>
+
+<figma type="code" file="/README.md">
+# 🌍 World Time Checker
+
+> **Farcaster Mini App for tracking world time zones with beautiful pixel art design**
+
+[![Live Demo](https://img.shields.io/badge/Live-Demo-orange?style=for-the-badge)](https://terra-pacing-05021987.figma.site)
+[![Farcaster](https://img.shields.io/badge/Farcaster-Mini_App-purple?style=for-the-badge)](https://www.farcaster.xyz/)
+[![React](https://img.shields.io/badge/React-18.2-blue?style=for-the-badge&logo=react)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4.0-06B6D4?style=for-the-badge&logo=tailwindcss)](https://tailwindcss.com/)
+
+## ✨ Features
+
+- **🕐 Live World Clocks** - Real-time timezone tracking across the globe
+- **🎨 Pixel Art Design** - Beautiful retro-inspired globe character
+- **📱 Mobile-First** - Optimized for mobile Farcaster experience
+- **🌍 URL Sharing** - Share specific timezone configurations
+- **💾 Auto-Save** - Local storage with Supabase backup
+- **🎮 Haptic Feedback** - Enhanced mobile interaction
+- **🔗 Deep Linking** - Direct timezone setup via URL parameters
+- **⚡ Offline Support** - Works without internet connection
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm/yarn/pnpm
+- Supabase account (optional for backend features)
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/world-time-checker.git
+cd world-time-checker
+
+# Install dependencies
+npm install
+
+# Set up environment variables
+cp .env.example .env
+# Edit .env with your Supabase credentials
+
+# Start development server
+npm run dev
+```
+
+### Build for Production
+
+```bash
+# Build the app
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## 🛠 Tech Stack
+
+- **Frontend**: React 18 + TypeScript
+- **Styling**: Tailwind CSS v4 + Custom Brand System
+- **UI Components**: shadcn/ui
+- **Backend**: Supabase (Database + Auth + Storage)
+- **Integration**: Farcaster Mini App SDK
+- **Build Tool**: Vite
+- **State Management**: React Hooks + Local Storage
+
+## 📦 Project Structure
+
+```
+├── App.tsx                 # Main application component
+├── components/             # React components
+│   ├── ui/                # shadcn/ui components
+│   ├── PixelGlobeIcon.tsx # Custom pixel art globe
+│   ├── TimezoneSelector.tsx
+│   └── WorldClock.tsx
+├── hooks/                 # Custom React hooks
+├── services/              # API and business logic
+├── styles/                # Global CSS and themes
+├── supabase/              # Backend functions
+└── utils/                 # Utility functions
+```
+
+## 🌐 Environment Variables
+
+```bash
+# Required for backend features
+VITE_SUPABASE_URL=your-supabase-project-url
+VITE_SUPABASE_ANON_KEY=your-supabase-anon-key
+SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
+
+# Optional for enhanced features  
+VITE_FARCASTER_APP_ID=your-farcaster-app-id
+```
+
+## 🎯 URL Parameters
+
+The app supports deep linking with timezone parameters:
+
+```
+https://yourapp.com/?tz1=Asia/Seoul&tz2=America/New_York&tz3=Europe/London
+```
+
+## 🎨 Brand Colors
+
+The app uses a warm orange brand color system:
+
+- **Primary**: `#FFB74D` (Orange 500)
+- **Accent**: `#FF9800` (Orange 600) 
+- **Text**: `#E65100` (Orange 800)
+- **Background**: Gradient from orange to yellow
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
+
+```bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Deploy
+vercel
+```
+
+### Netlify
+
+```bash
+# Build
+npm run build
+
+# Deploy dist/ folder to Netlify
+```
+
+### Manual Deployment
+
+The app builds to a static `dist/` folder that can be deployed to any static hosting service.
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- **Farcaster** for the Mini App platform
+- **shadcn/ui** for the component library
+- **Supabase** for the backend infrastructure
+- **Tailwind CSS** for the styling system
+
+## 📱 Live Demo
+
+Check out the live app: [World Time Checker](https://terra-pacing-05021987.figma.site)
+
+---
+
+**Built with ❤️ for the Farcaster ecosystem**

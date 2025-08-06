@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Time - anywhere, anytime</title>
+    
+    <!-- Basic Meta Tags -->
+    <meta name="description" content="World Time Checker lets you track time zones across the globe. Easily select your favorite cities, compare times, and stay in sync with international teams, friends, or events — all in one clean interface.">
+    <meta name="keywords" content="world, clock, time, timezone, farcaster, frame, live, global, international">
+    <meta name="author" content="Live World Clocks">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="World Time">
+    <meta property="og:description" content="Know the time anywhere, anytime.">
+    <meta property="og:image" content="https://terra-pacing-05021987.figma.site/hero.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="World Time app - check time zones across the globe">
+    <meta property="og:url" content="https://terra-pacing-05021987.figma.site">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="World Time">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="World Time">
+    <meta name="twitter:description" content="Know the time anywhere, anytime.">
+    <meta name="twitter:image" content="https://terra-pacing-05021987.figma.site/hero.png">
+    <meta name="twitter:image:alt" content="World Time app - check time zones across the globe">
+    
+    <!-- Farcaster Mini App Meta Tags - Essential for validation -->
+    <meta name="fc:miniapp" content="vNext">
+    <meta name="fc:miniapp:image" content="https://terra-pacing-05021987.figma.site/hero.png">
+    <meta name="fc:miniapp:image:aspect_ratio" content="1.91:1">
+    <meta name="fc:miniapp:button:1" content="check the world time">
+    <meta name="fc:miniapp:button:1:action" content="launch">
+    <meta name="fc:miniapp:button:1:target" content="https://terra-pacing-05021987.figma.site">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/icon.png">
+    <link rel="apple-touch-icon" href="/icon.png">
+    
+    <!-- Preconnect to improve performance -->
+    <link rel="preconnect" href="https://auth.farcaster.xyz">
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #FFF3E0 0%, #FFF8E1 50%, #FFFDE7 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .loader {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .spinner {
+            width: 3rem;
+            height: 3rem;
+            border: 3px solid #FFB74D;
+            border-top: 3px solid transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #E65100;
+            margin: 0;
+        }
+        
+        .subtitle {
+            font-size: 0.875rem;
+            color: #666;
+            margin: 0;
+            text-align: center;
+        }
+        
+        .question {
+            font-size: 0.75rem;
+            color: #999;
+            margin: 0;
+            font-style: italic;
+        }
+        
+        /* Pixelated image rendering for retro feel */
+        .pixelated {
+            image-rendering: -moz-crisp-edges;
+            image-rendering: -webkit-crisp-edges;
+            image-rendering: pixelated;
+            image-rendering: crisp-edges;
+        }
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <div class="spinner"></div>
+        <h1 class="title">World Time</h1>
+        <p class="subtitle">Know the time anywhere, anytime...</p>
+        <p class="question">Loading mini app...</p>
+    </div>
+    
+    <script>
+        // This will be replaced by your build system
+        console.log('World Time - Farcaster Mini App Loading...');
+        
+        // Add basic error handling for Farcaster SDK
+        window.addEventListener('error', function(e) {
+            console.error('Loading error:', e.error);
+        });
+        
+        // Basic frame ready detection
+        window.addEventListener('message', function(event) {
+            if (event.data.type === 'fc:frame:ready') {
+                console.log('Farcaster Frame is ready');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+import React from 'react';
+import heroAsset from "figma:asset/9c076c1bf5b0cff2470493ba9fe9d079c618e69f.png";
+
+// 1200x800 hero image for app store/marketing
+const HeroImage = () => {
+  return (
+    <div className="w-[1200px] h-[800px] bg-gradient-to-br from-orange-100 via-amber-50 to-yellow-100 flex items-center justify-center relative overflow-hidden">
+      {/* Background pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="w-full h-full" style={{
+          backgroundImage: `repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 10px,
+            rgba(255, 183, 77, 0.1) 10px,
+            rgba(255, 183, 77, 0.1) 20px
+          )`
+        }} />
+      </div>
+      
+      {/* Main content */}
+      <div className="relative z-10 text-center">
+        <img 
+          src={heroAsset}
+          alt="Live World Clocks - What time is it now?"
+          className="mx-auto max-w-[600px] max-h-[400px] object-contain pixelated mb-8"
+          style={{
+            imageRendering: 'pixelated',
+            imageRendering: '-moz-crisp-edges',
+            imageRendering: '-webkit-crisp-edges',
+            imageRendering: 'crisp-edges'
+          }}
+        />
+        
+        {/* Additional branding */}
+        <div className="mt-8">
+          <h1 className="text-6xl font-bold text-orange-800 mb-4">
+            Live World Clocks
+          </h1>
+          <p className="text-2xl text-orange-600 mb-6">
+            Track time zones from around the world
+          </p>
+          <div className="flex items-center justify-center gap-4 text-lg text-orange-500">
+            <span>🌍 Multi-timezone support</span>
+            <span>•</span>
+            <span>🔄 Real-time updates</span>
+            <span>•</span>
+            <span>🎨 Pixel art charm</span>
+          </div>
+          <div className="mt-6 text-orange-400">
+            <p className="text-xl">Available on Farcaster</p>
+          </div>
+        </div>
+      </div>
+      
+      {/* Corner decorations */}
+      <div className="absolute top-4 left-4 text-4xl">🌅</div>
+      <div className="absolute top-4 right-4 text-4xl">🌙</div>
+      <div className="absolute bottom-4 left-4 text-4xl">⏰</div>
+      <div className="absolute bottom-4 right-4 text-4xl">🌏</div>
+    </div>
+  );
+};
+
+export default HeroImage;

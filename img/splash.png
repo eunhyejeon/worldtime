@@ -1,0 +1,23 @@
+import React from 'react';
+import splashAsset from "figma:asset/e605a7de666dfd2d1fbac1d6d0fec918525e3513.png";
+
+// 512x512 splash screen with pixel art globe character
+const SplashImage = () => {
+  return (
+    <div className="w-[512px] h-[512px] flex items-center justify-center bg-transparent">
+      <img 
+        src={splashAsset}
+        alt="Live World Clocks - Pixel Globe Character"
+        className="w-full h-full object-contain pixelated"
+        style={{
+          imageRendering: 'pixelated',
+          imageRendering: '-moz-crisp-edges',
+          imageRendering: '-webkit-crisp-edges',
+          imageRendering: 'crisp-edges'
+        }}
+      />
+    </div>
+  );
+};
+
+export default SplashImage;

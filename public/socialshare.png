@@ -1,0 +1,59 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="social-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFF3E0;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFF8E1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFFDE7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#social-bg)"/>
+  
+  <!-- Background pattern -->
+  <circle cx="150" cy="120" r="60" fill="#FFB74D" opacity="0.1"/>
+  <circle cx="1050" cy="510" r="90" fill="#FF8A65" opacity="0.1"/>
+  <circle cx="300" cy="480" r="40" fill="#FFA726" opacity="0.15"/>
+  <circle cx="900" cy="150" r="70" fill="#FFB74D" opacity="0.08"/>
+  
+  <!-- Main content -->
+  <g transform="translate(600, 315)">
+    <!-- Multiple clocks representing different time zones -->
+    <g transform="translate(-200, -60)">
+      <circle cx="0" cy="0" r="45" fill="white" stroke="#FFB74D" stroke-width="3"/>
+      <circle cx="0" cy="0" r="2" fill="#E65100"/>
+      <line x1="0" y1="0" x2="0" y2="-25" stroke="#E65100" stroke-width="2" stroke-linecap="round"/>
+      <line x1="0" y1="0" x2="18" y2="0" stroke="#E65100" stroke-width="1.5" stroke-linecap="round"/>
+      <text x="0" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#666">NYC</text>
+    </g>
+    
+    <g transform="translate(0, -60)">
+      <circle cx="0" cy="0" r="45" fill="white" stroke="#FFB74D" stroke-width="3"/>
+      <circle cx="0" cy="0" r="2" fill="#E65100"/>
+      <line x1="0" y1="0" x2="-15" y2="-20" stroke="#E65100" stroke-width="2" stroke-linecap="round"/>
+      <line x1="0" y1="0" x2="12" y2="12" stroke="#E65100" stroke-width="1.5" stroke-linecap="round"/>
+      <text x="0" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#666">LONDON</text>
+    </g>
+    
+    <g transform="translate(200, -60)">
+      <circle cx="0" cy="0" r="45" fill="white" stroke="#FFB74D" stroke-width="3"/>
+      <circle cx="0" cy="0" r="2" fill="#E65100"/>
+      <line x1="0" y1="0" x2="20" y2="-15" stroke="#E65100" stroke-width="2" stroke-linecap="round"/>
+      <line x1="0" y1="0" x2="-8" y2="18" stroke="#E65100" stroke-width="1.5" stroke-linecap="round"/>
+      <text x="0" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#666">TOKYO</text>
+    </g>
+  </g>
+  
+  <!-- Title -->
+  <text x="600" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#E65100">live world clocks</text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#666">what time is it now?</text>
+  
+  <!-- Farcaster Frame badge -->
+  <rect x="500" y="520" width="200" height="40" rx="20" fill="#FFB74D"/>
+  <text x="600" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">Farcaster Frame</text>
+  
+  <!-- Globe emojis for decoration -->
+  <text x="200" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="40" opacity="0.3">🌍</text>
+  <text x="1000" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="35" opacity="0.3">🌎</text>
+  <text x="150" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" opacity="0.3">🌏</text>
+</svg>

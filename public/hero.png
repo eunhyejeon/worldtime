@@ -1,0 +1,85 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="hero-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFF3E0;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#FFF8E1;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#FFFDE7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFF9C4;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="clock-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFB74D;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#FFB74D;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#hero-bg)"/>
+  
+  <!-- Background decoration -->
+  <circle cx="200" cy="150" r="120" fill="url(#clock-glow)"/>
+  <circle cx="1000" cy="650" r="150" fill="url(#clock-glow)"/>
+  <circle cx="100" cy="600" r="80" fill="url(#clock-glow)"/>
+  <circle cx="1100" cy="200" r="100" fill="url(#clock-glow)"/>
+  
+  <!-- Main hero content -->
+  <g transform="translate(600, 400)">
+    <!-- Central large clock -->
+    <circle cx="0" cy="-100" r="120" fill="white" stroke="#FFB74D" stroke-width="6"/>
+    <circle cx="0" cy="-100" r="100" fill="white"/>
+    <circle cx="0" cy="-100" r="6" fill="#E65100"/>
+    <!-- Clock hands showing different time -->
+    <line x1="0" y1="-100" x2="0" y2="-150" stroke="#E65100" stroke-width="4" stroke-linecap="round"/>
+    <line x1="0" y1="-100" x2="40" y2="-100" stroke="#E65100" stroke-width="3" stroke-linecap="round"/>
+    <!-- Hour markers -->
+    <circle cx="0" cy="-200" r="4" fill="#FFB74D"/>
+    <circle cx="70" cy="-170" r="3" fill="#FFB74D"/>
+    <circle cx="100" cy="-100" r="4" fill="#FFB74D"/>
+    <circle cx="70" cy="-30" r="3" fill="#FFB74D"/>
+    <circle cx="0" cy="0" r="4" fill="#FFB74D"/>
+    <circle cx="-70" cy="-30" r="3" fill="#FFB74D"/>
+    <circle cx="-100" cy="-100" r="4" fill="#FFB74D"/>
+    <circle cx="-70" cy="-170" r="3" fill="#FFB74D"/>
+    
+    <!-- Floating mini clocks -->
+    <g transform="translate(-300, -50)">
+      <circle cx="0" cy="0" r="40" fill="white" stroke="#FFA726" stroke-width="2"/>
+      <line x1="0" y1="0" x2="0" y2="-20" stroke="#E65100" stroke-width="2"/>
+      <line x1="0" y1="0" x2="15" y2="0" stroke="#E65100" stroke-width="1"/>
+      <text x="0" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#666">12:00</text>
+    </g>
+    
+    <g transform="translate(300, -50)">
+      <circle cx="0" cy="0" r="40" fill="white" stroke="#FFA726" stroke-width="2"/>
+      <line x1="0" y1="0" x2="-10" y2="-15" stroke="#E65100" stroke-width="2"/>
+      <line x1="0" y1="0" x2="18" y2="5" stroke="#E65100" stroke-width="1"/>
+      <text x="0" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#666">17:30</text>
+    </g>
+    
+    <g transform="translate(-180, 120)">
+      <circle cx="0" cy="0" r="35" fill="white" stroke="#FF8A65" stroke-width="2"/>
+      <line x1="0" y1="0" x2="12" y2="-12" stroke="#E65100" stroke-width="2"/>
+      <line x1="0" y1="0" x2="-8" y2="15" stroke="#E65100" stroke-width="1"/>
+      <text x="0" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#666">09:45</text>
+    </g>
+    
+    <g transform="translate(180, 120)">
+      <circle cx="0" cy="0" r="35" fill="white" stroke="#FF8A65" stroke-width="2"/>
+      <line x1="0" y1="0" x2="5" y2="-18" stroke="#E65100" stroke-width="2"/>
+      <line x1="0" y1="0" x2="16" y2="-8" stroke="#E65100" stroke-width="1"/>
+      <text x="0" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#666">22:15</text>
+    </g>
+  </g>
+  
+  <!-- Hero title -->
+  <text x="600" y="650" text-anchor="middle" font-family="Arial, sans-serif" font-size="64" font-weight="bold" fill="#E65100">live world clocks</text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="710" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" fill="#666">what time is it now?</text>
+  
+  <!-- Tagline -->
+  <text x="600" y="750" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#999">world clock, time checker</text>
+  
+  <!-- Decorative elements -->
+  <text x="150" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="60" opacity="0.2">🌍</text>
+  <text x="1050" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="50" opacity="0.2">🌎</text>
+  <text x="100" y="700" text-anchor="middle" font-family="Arial, sans-serif" font-size="40" opacity="0.2">🌏</text>
+  <text x="1100" y="750" text-anchor="middle" font-family="Arial, sans-serif" font-size="45" opacity="0.2">⏰</text>
+</svg>

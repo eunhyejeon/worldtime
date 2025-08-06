@@ -1,0 +1,4 @@
+import imageAsset from "figma:asset/9c076c1bf5b0cff2470493ba9fe9d079c618e69f.png";
+
+// This will be the 1200x630 frame preview image - "World Time blah blah"
+export default imageAsset;

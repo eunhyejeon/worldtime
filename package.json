@@ -1,0 +1,54 @@
+{
+  "name": "world-time-checker",
+  "version": "1.0.0",
+  "description": "🌍 Farcaster Mini App for tracking world time zones with pixel art design",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@farcaster/miniapp-sdk": "latest",
+    "lucide-react": "latest",
+    "sonner": "2.0.3",
+    "react-hook-form": "7.55.0",
+    "@supabase/supabase-js": "latest",
+    "motion": "latest"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "@vitejs/plugin-react": "^4.2.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "typescript": "^5.3.0",
+    "vite": "^5.1.0",
+    "@tailwindcss/vite": "^4.0.0-alpha.30",
+    "tailwindcss": "^4.0.0-alpha.30"
+  },
+  "keywords": [
+    "farcaster",
+    "miniapp",
+    "world-clock",
+    "timezone",
+    "react",
+    "typescript",
+    "tailwind",
+    "supabase",
+    "pixel-art"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/world-time-checker.git"
+  }
+}
