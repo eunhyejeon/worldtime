@@ -31,6 +31,6 @@
       "@/styles/*": ["./styles/*"]
     }
   },
-  "include": ["src", "*.tsx", "*.ts", "components", "hooks", "services", "utils", "styles"],
+  "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -116,28 +116,7 @@
     </style>
 </head>
 <body>
-    <div class="loader">
-        <div class="spinner"></div>
-        <h1 class="title">World Time</h1>
-        <p class="subtitle">Know the time anywhere, anytime...</p>
-        <p class="question">Loading mini app...</p>
-    </div>
-    
-    <script>
-        // This will be replaced by your build system
-        console.log('World Time - Farcaster Mini App Loading...');
-        
-        // Add basic error handling for Farcaster SDK
-        window.addEventListener('error', function(e) {
-            console.error('Loading error:', e.error);
-        });
-        
-        // Basic frame ready detection
-        window.addEventListener('message', function(event) {
-            if (event.data.type === 'fc:frame:ready') {
-                console.log('Farcaster Frame is ready');
-            }
-        });
-    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
 </body>
 </html>
