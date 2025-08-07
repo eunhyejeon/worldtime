@@ -8,6 +8,8 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
+  root: '.',
+  publicDir: 'public',
   resolve: {
     alias: {
       '@': '/src',
@@ -17,13 +19,7 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets',
     rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          farcaster: ['@farcaster/miniapp-sdk'],
-          ui: ['lucide-react', 'sonner']
-        }
-      }
+      input: 'public/index.html'
     }
   },
   server: {
