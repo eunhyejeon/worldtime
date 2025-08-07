@@ -116,14 +116,123 @@
     </style>
 </head>
 <body>
-    <div id="root">
-        <div class="loader">
-            <div class="spinner"></div>
-            <h1 class="title">🌍 World Time</h1>
-            <p class="subtitle">Know the time anywhere, anytime...</p>
-            <p class="question">Loading mini app...</p>
-        </div>
-    </div>
-    <script type="module" src="/src/main.tsx"></script>
+    <div id="root"></div>
+    
+    <script>
+        // 즉시 실행되는 World Time 앱
+        const timeZones = [
+            { city: 'New York', timezone: 'America/New_York', flag: '🇺🇸' },
+            { city: 'London', timezone: 'Europe/London', flag: '🇬🇧' },
+            { city: 'Tokyo', timezone: 'Asia/Tokyo', flag: '🇯🇵' },
+            { city: 'Sydney', timezone: 'Australia/Sydney', flag: '🇦🇺' },
+            { city: 'Los Angeles', timezone: 'America/Los_Angeles', flag: '🇺🇸' },
+            { city: 'Dubai', timezone: 'Asia/Dubai', flag: '🇦🇪' },
+            { city: 'Paris', timezone: 'Europe/Paris', flag: '🇫🇷' },
+            { city: 'Singapore', timezone: 'Asia/Singapore', flag: '🇸🇬' }
+        ];
+
+        function formatTime(timezone) {
+            return new Date().toLocaleTimeString('en-US', {
+                timeZone: timezone,
+                hour12: false,
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
+        }
+
+        function formatDate(timezone) {
+            return new Date().toLocaleDateString('en-US', {
+                timeZone: timezone,
+                weekday: 'short',
+                month: 'short',
+                day: 'numeric'
+            });
+        }
+
+        function createApp() {
+            const root = document.getElementById('root');
+            
+            const appHTML = `
+                <div style="min-height: 100vh; background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 50%, #FFCC80 100%); padding: 1rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+                    <div style="max-width: 1200px; margin: 0 auto;">
+                        <header style="text-align: center; margin-bottom: 2rem;">
+                            <h1 style="font-size: 3rem; font-weight: bold; color: #E65100; margin: 0 0 1rem 0;">
+                                🌍 World Time
+                            </h1>
+                            <p style="font-size: 1.25rem; color: #F57C00; margin-bottom: 1rem;">
+                                Know the time anywhere, anytime
+                            </p>
+                            <div style="font-size: 0.875rem; color: #F57C00;">
+                                Updated every second • Farcaster Mini App
+                            </div>
+                        </header>
+                        
+                        <div id="clock-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+                        </div>
+                        
+                        <footer style="text-align: center; color: #666;">
+                            <div style="background: white; border-radius: 8px; padding: 1rem; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+                                <p style="font-size: 0.875rem; margin: 0 0 0.5rem 0;">
+                                    🕐 World Time Checker - Track time zones across the globe
+                                </p>
+                                <p style="font-size: 0.75rem; margin: 0;">
+                                    Built for Farcaster • Updates in real-time
+                                </p>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            `;
+            
+            root.innerHTML = appHTML;
+            updateClocks();
+        }
+
+        function updateClocks() {
+            const grid = document.getElementById('clock-grid');
+            if (!grid) return;
+            
+            grid.innerHTML = timeZones.map(location => `
+                <div style="background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); border: 1px solid #FFE0B2; transition: box-shadow 0.3s ease;" 
+                     onmouseover="this.style.boxShadow='0 10px 15px -3px rgba(0, 0, 0, 0.1)'" 
+                     onmouseout="this.style.boxShadow='0 4px 6px -1px rgba(0, 0, 0, 0.1)'">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                        <h3 style="font-size: 1.125rem; font-weight: bold; color: #333; margin: 0;">${location.city}</h3>
+                        <span style="font-size: 1.5rem;">${location.flag}</span>
+                    </div>
+                    
+                    <div style="font-size: 2rem; font-family: monospace; font-weight: bold; color: #F57C00; text-align: center; margin-bottom: 0.5rem;">
+                        ${formatTime(location.timezone)}
+                    </div>
+                    <div style="font-size: 0.875rem; color: #666; text-align: center; margin-bottom: 1rem;">
+                        ${formatDate(location.timezone)}
+                    </div>
+                    
+                    <div style="font-size: 0.75rem; color: #999; text-align: center; padding-top: 1rem; border-top: 1px solid #f0f0f0;">
+                        ${location.timezone.replace('_', ' ')}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // 앱 시작
+        document.addEventListener('DOMContentLoaded', function() {
+            createApp();
+            // 매초 업데이트
+            setInterval(updateClocks, 1000);
+        });
+
+        // 즉시 실행 (DOMContentLoaded 이벤트를 기다리지 않고)
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', function() {
+                createApp();
+                setInterval(updateClocks, 1000);
+            });
+        } else {
+            createApp();
+            setInterval(updateClocks, 1000);
+        }
+    </script>
 </body>
 </html>
