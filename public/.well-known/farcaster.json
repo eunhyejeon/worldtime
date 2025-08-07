@@ -6,20 +6,20 @@
   },
   "name": "World Time",
   "version": "1.0.0",
-  "iconUrl": "https://worldtime-azure.vercel.app/icon.png",
+  "iconUrl": "https://worldtime-azure.vercel.app/img/icon.png",
   "homeUrl": "https://worldtime-azure.vercel.app/",
-  "imageUrl": "https://worldtime-azure.vercel.app/hero.png",
+  "imageUrl": "https://worldtime-azure.vercel.app/img/hero.png",
   "buttonTitle": "check the world time",
-  "splashImageUrl": "https://worldtime-azure.vercel.app/splash.png",
+  "splashImageUrl": "https://worldtime-azure.vercel.app/img/splash.png",
   "splashBackgroundColor": "#FFB74D",
   "webhookUrl": "https://worldtime-azure.vercel.app/api/webhook",
   "subtitle": "Know the time anywhere, anytime.",
   "description": "World Time Checker lets you track time zones across the globe. Easily select your favorite cities, compare times, and stay in sync with international teams, friends, or events — all in one clean interface.",
   "primaryCategory": "utility",
   "screenshotUrls": [
-    "https://worldtime-azure.vercel.app/hero.png"
+    "https://worldtime-azure.vercel.app/img/hero.png"
   ],
-  "heroImageUrl": "https://worldtime-azure.vercel.app/hero.png",
+  "heroImageUrl": "https://worldtime-azure.vercel.app/img/hero.png",
   "tags": [
     "time",
     "clock",

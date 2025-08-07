@@ -47,56 +47,158 @@ function App() {
     })
   }
 
+  const containerStyle = {
+    minHeight: '100vh',
+    background: 'linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 50%, #FFCC80 100%)',
+    padding: '1rem',
+    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+  }
+
+  const mainStyle = {
+    maxWidth: '1200px',
+    margin: '0 auto'
+  }
+
+  const headerStyle = {
+    textAlign: 'center' as const,
+    marginBottom: '2rem'
+  }
+
+  const titleStyle = {
+    fontSize: '3rem',
+    fontWeight: 'bold',
+    color: '#E65100',
+    margin: '0 0 1rem 0'
+  }
+
+  const subtitleStyle = {
+    fontSize: '1.25rem',
+    color: '#F57C00',
+    marginBottom: '1rem'
+  }
+
+  const gridStyle = {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+    gap: '1.5rem',
+    marginBottom: '3rem'
+  }
+
+  const cardStyle = {
+    background: 'white',
+    borderRadius: '12px',
+    padding: '1.5rem',
+    boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+    border: '1px solid #FFE0B2',
+    transition: 'box-shadow 0.3s ease'
+  }
+
+  const cardHeaderStyle = {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: '1rem'
+  }
+
+  const cityStyle = {
+    fontSize: '1.125rem',
+    fontWeight: 'bold',
+    color: '#333',
+    margin: 0
+  }
+
+  const flagStyle = {
+    fontSize: '1.5rem'
+  }
+
+  const timeStyle = {
+    fontSize: '2rem',
+    fontFamily: 'monospace',
+    fontWeight: 'bold',
+    color: '#F57C00',
+    textAlign: 'center' as const,
+    marginBottom: '0.5rem'
+  }
+
+  const dateStyle = {
+    fontSize: '0.875rem',
+    color: '#666',
+    textAlign: 'center' as const,
+    marginBottom: '1rem'
+  }
+
+  const timezoneStyle = {
+    fontSize: '0.75rem',
+    color: '#999',
+    textAlign: 'center' as const,
+    paddingTop: '1rem',
+    borderTop: '1px solid #f0f0f0'
+  }
+
+  const footerStyle = {
+    textAlign: 'center' as const,
+    color: '#666'
+  }
+
+  const footerCardStyle = {
+    background: 'white',
+    borderRadius: '8px',
+    padding: '1rem',
+    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)'
+  }
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-amber-100 p-4">
-      <div className="max-w-6xl mx-auto">
-        <header className="text-center mb-8">
-          <h1 className="text-5xl font-bold text-orange-800 mb-2">
+    <div style={containerStyle}>
+      <div style={mainStyle}>
+        <header style={headerStyle}>
+          <h1 style={titleStyle}>
             🌍 World Time
           </h1>
-          <p className="text-xl text-orange-600 mb-4">
+          <p style={subtitleStyle}>
             Know the time anywhere, anytime
           </p>
-          <div className="text-sm text-orange-500">
+          <div style={{fontSize: '0.875rem', color: '#F57C00'}}>
             Updated every second • Farcaster Mini App
           </div>
         </header>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div style={gridStyle}>
           {timeZones.map((location) => (
             <div 
               key={location.city} 
-              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 border border-orange-100"
+              style={cardStyle}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1)'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
+              }}
             >
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="font-bold text-lg text-gray-800">{location.city}</h3>
-                <span className="text-2xl">{location.flag}</span>
+              <div style={cardHeaderStyle}>
+                <h3 style={cityStyle}>{location.city}</h3>
+                <span style={flagStyle}>{location.flag}</span>
               </div>
               
-              <div className="text-center">
-                <div className="text-3xl font-mono font-bold text-orange-600 mb-2">
-                  {formatTime(location.timezone)}
-                </div>
-                <div className="text-sm text-gray-500">
-                  {formatDate(location.timezone)}
-                </div>
+              <div style={timeStyle}>
+                {formatTime(location.timezone)}
+              </div>
+              <div style={dateStyle}>
+                {formatDate(location.timezone)}
               </div>
               
-              <div className="mt-4 pt-4 border-t border-gray-100">
-                <div className="text-xs text-gray-400 text-center">
-                  {location.timezone.replace('_', ' ')}
-                </div>
+              <div style={timezoneStyle}>
+                {location.timezone.replace('_', ' ')}
               </div>
             </div>
           ))}
         </div>
         
-        <footer className="text-center mt-12 text-gray-500">
-          <div className="bg-white rounded-lg p-4 shadow-sm">
-            <p className="text-sm">
+        <footer style={footerStyle}>
+          <div style={footerCardStyle}>
+            <p style={{fontSize: '0.875rem', margin: '0 0 0.5rem 0'}}>
               🕐 World Time Checker - Track time zones across the globe
             </p>
-            <p className="text-xs mt-2">
+            <p style={{fontSize: '0.75rem', margin: 0}}>
               Built for Farcaster • Updates in real-time
             </p>
           </div>
