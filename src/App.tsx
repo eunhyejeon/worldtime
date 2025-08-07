@@ -21,6 +21,7 @@ function App() {
   const [currentTime, setCurrentTime] = useState(new Date())
 
   useEffect(() => {
+    console.log('App component mounted!')
     const timer = setInterval(() => {
       setCurrentTime(new Date())
     }, 1000)
