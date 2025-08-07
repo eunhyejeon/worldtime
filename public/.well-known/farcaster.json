@@ -1,25 +1,25 @@
 {
   "accountAssociation": {
     "header": "eyJmaWQiOjAsInR5cGUiOiJjdXN0b2R5Iiwia2V5IjoiMHgwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIn0",
-    "payload": "eyJkb21haW4iOiJ0ZXJyYS1wYWNpbmctMDUwMjE5ODcuZmlnbWEuc2l0ZSJ9",
+    "payload": "eyJkb21haW4iOiJ3b3JsZHRpbWUtYXp1cmUudmVyY2VsLmFwcCJ9",
     "signature": "MHgwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA"
   },
   "name": "World Time",
   "version": "1.0.0",
-  "iconUrl": "https://terra-pacing-05021987.figma.site/img/icon.png",
-  "homeUrl": "https://terra-pacing-05021987.figma.site/",
-  "imageUrl": "https://terra-pacing-05021987.figma.site/img/screenshot.png",
+  "iconUrl": "https://worldtime-azure.vercel.app/icon.png",
+  "homeUrl": "https://worldtime-azure.vercel.app/",
+  "imageUrl": "https://worldtime-azure.vercel.app/hero.png",
   "buttonTitle": "check the world time",
-  "splashImageUrl": "https://terra-pacing-05021987.figma.site/img/splash.png",
+  "splashImageUrl": "https://worldtime-azure.vercel.app/splash.png",
   "splashBackgroundColor": "#FFB74D",
-  "webhookUrl": "https://terra-pacing-05021987.figma.site/api/webhook",
+  "webhookUrl": "https://worldtime-azure.vercel.app/api/webhook",
   "subtitle": "Know the time anywhere, anytime.",
   "description": "World Time Checker lets you track time zones across the globe. Easily select your favorite cities, compare times, and stay in sync with international teams, friends, or events — all in one clean interface.",
   "primaryCategory": "utility",
   "screenshotUrls": [
-    "https://terra-pacing-05021987.figma.site/img/screenshot.png"
+    "https://worldtime-azure.vercel.app/hero.png"
   ],
-  "heroImageUrl": "https://terra-pacing-05021987.figma.site/img/hero.png",
+  "heroImageUrl": "https://worldtime-azure.vercel.app/hero.png",
   "tags": [
     "time",
     "clock",
